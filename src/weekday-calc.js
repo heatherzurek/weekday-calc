@@ -1,27 +1,37 @@
 export function getUserDate(dateInput) {
-  let dateNumber = dateInput.getDay();
-  console.log("bladh");
+  let dateNumber = dateInput.getUTCDay();
   let dayOfTheWeek = "";
   if (dateNumber === 0) {
-    dayOfTheWeek = "Monday";
+    dayOfTheWeek = "Sunday";
   }
   if (dateNumber === 1) {
-    dayOfTheWeek = "Tuesday";
+    dayOfTheWeek = "Monday";
   }
   if (dateNumber === 2) {
-    dayOfTheWeek = "Wednesday";
+    dayOfTheWeek = "Tuesday";
   }
   if (dateNumber === 3) {
-    dayOfTheWeek = "Thursday";
+    dayOfTheWeek = "Wednesday";
   }
   if (dateNumber === 4) {
-    dayOfTheWeek = "Friday";
+    dayOfTheWeek = "Thursday";
   }
   if (dateNumber === 5) {
-    dayOfTheWeek = "Saturday";
+    dayOfTheWeek = "Friday";
   }
   if (dateNumber === 6) {
-    dayOfTheWeek = "Sunday";
+    dayOfTheWeek = "Saturday";
   }
   return dayOfTheWeek;
 }
+
+// const weekDays = [];
+// weekDays.push(
+//   {  int: 0,  day: "Monday"  }
+//   {  int: 1,  day: "Tuesday"  }
+//   {  int: 2,  day: "Wednesday"  }
+//   {  int: 3,  day: "Thursday"  }
+//   {  int: 4,  day: "Friday"  }
+//   {  int: 5,  day: "Saturday"  }
+//   {  int: 6,  day: "Sunday"  }
+// );
