@@ -7,11 +7,10 @@ import './styles.css';
 
 $(document).ready(function() {
   $("#buttForm").submit(function(event) {
-    console.log("Butt forms always work");
     event.preventDefault();
     let userDate = $("#date").val();
-    let output = getUserDate(userDate);
+    let date = new Date(userDate);
+    let output = getUserDate(date);
     $('p').text(output);
-    $('div.result').show();
   });
 });
